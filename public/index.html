@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Solver Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Wordle Solver</h1>
+        <p>Type your guess, then click a box to match the Wordle colors.</p>
+    </header>
+
+    <div id="grid" class="grid">
+        </div>
+
+    <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
+        <button id="solve-btn" class="button_primary">Get Best Next Guesses</button>
+        <button id="reset-btn" class="button_secondary">Reset Grid</button>
+    </div>
+
+    <div id="results" class="results-container"></div>
+
+    <div style="width: 30%; margin: auto;">
+        <canvas id="spaceChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,18 @@
-src/bot: src/ex11q1.c src/game.c
-	gcc -Wall -Werror -std=c99 -g src/ex11q1.c src/game.c -o bot
+CC = gcc
+CFLAGS = -Wall -O3 -std=c99
+LDFLAGS = -lm
+
+all: solver install start
+
+solver: solver.c
+	$(CC) $(CFLAGS) solver.c $(LDFLAGS) -o solver
+
+install:
+	npm install
+
+start:
+	npm start
+
 clean:
-	rm -f src/ex11q1
+	rm -f solver
+	rm -rf node_modules

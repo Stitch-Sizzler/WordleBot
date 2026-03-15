@@ -1,0 +1,93 @@
+body {
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121213;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #3a3a3c;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    background: transparent;
+    color: white;
+    caret-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.tile:focus {
+    outline: none;
+    border-color: #565758;
+}
+
+/* Wordle Standard Colors */
+.bg-X { background-color: #3a3a3c; border-color: #3a3a3c; }
+.bg-Y { background-color: #b59f3b; border-color: #b59f3b; }
+.bg-G { background-color: #538d4e; border-color: #538d4e; }
+
+.button_primary {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #538d4e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button_primary:hover {
+    background-color: #43703e;
+}
+
+.button_secondary {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #565758;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.button_secondary:hover {
+    background-color: #3a3a3c;
+    border-color: #ffffff;
+}
+
+.results-container {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.5;
+}
